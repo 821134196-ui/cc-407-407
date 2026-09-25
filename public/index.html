@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATM 现金清分与钞箱交接平台</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">¥</span>
+      <div>
+        <h1>ATM 现金清分与钞箱交接平台</h1>
+        <p class="brand-sub">现金清分 · 钞箱交接 · 双人复核 · 差额管控 <em>(演示数据)</em></p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <label class="actor-pick">
+        当前操作人
+        <select id="actorSelect"></select>
+      </label>
+      <label class="actor-pick">
+        网点视角
+        <select id="branchFilter"><option value="">全部网点</option></select>
+      </label>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button data-view="atms" class="tab active">ATM 台账</button>
+    <button data-view="plans" class="tab">装钞计划</button>
+    <button data-view="clearing" class="tab">清机录入</button>
+    <button data-view="trace" class="tab">钞箱轨迹</button>
+    <button data-view="discrepancy" class="tab">差额复核</button>
+    <button data-view="audit" class="tab">审计查询</button>
+  </nav>
+
+  <main id="view" class="view"></main>
+
+  <div id="toast" class="toast"></div>
+  <div id="modalRoot"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

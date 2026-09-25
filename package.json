@@ -1,0 +1,15 @@
+{
+  "name": "atm-cash-platform",
+  "version": "1.0.0",
+  "description": "银行 ATM 现金清分与钞箱交接平台(演示数据,SQLite,零外部依赖)",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "seed": "node src/seed.js",
+    "test": "node --test test/*.test.js"
+  },
+  "license": "MIT"
+}
